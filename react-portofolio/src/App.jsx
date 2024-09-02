@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import computerIcon from './assets/windows98Icons/computerIcon.png';
 
 import Win98Window from "./Components/Win98Window";
+import Taskbar from './Components/Taskbar';
 
 function App() {
 
@@ -29,6 +30,10 @@ function App() {
         <p>This is a Windows 98 styled window!</p>
       </Win98Window>
     }
+    
+    <div className="taskbar-component">
+      <Taskbar />
+    </div>
 
     </>
   )
