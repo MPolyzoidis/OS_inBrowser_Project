@@ -8,6 +8,9 @@
 body {
     background-color: #008080;
     font-family: 'RetroFont', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
 }
 
 .whiteText {
