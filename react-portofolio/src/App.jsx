@@ -5,8 +5,6 @@ import computerIcon from './assets/windows98Icons/computerIcon.png';
 import Win98Window from "./components/Win98Window";
 import Taskbar from './components/Taskbar';
 
-import Draggable from 'react-draggable';
-
 function App() {
 
   const [isVisible, setIsVisible] = useState(true);
@@ -23,11 +21,9 @@ function App() {
     <>
     <h1 className='whiteText'>Hello World!</h1>
     <img src={computerIcon} alt="Windows98 Compouter Icon" className="computer-icon-btn" onClick={openComponent}></img>
-    <Draggable>
-      <p className='whiteText para'>
-        This is some random text that should be visible
-      </p>
-    </Draggable>
+    <p className='whiteText para'>
+      This is some random text that should be visible
+    </p>
 
     {isVisible &&  
       <Win98Window closeComponent={closeComponent} title="My Computer">
