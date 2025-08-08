@@ -1,0 +1,57 @@
+.win98-window {
+	width: 400px;
+	border: 2px solid #000;
+	box-shadow: 2px 2px 0px #fff, 4px 4px 0px #000;
+	background-color: #c3c7cb;
+	color: #000;
+	position: absolute;
+}
+
+.win98-title-bar {
+	background-color: #000080;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px;
+	box-shadow: inset 1px 1px #000, inset -1px -1px #808080;
+}
+
+.win98-title {
+	padding-left: 4px;
+}
+
+.win98-controls {
+	display: flex;
+	gap: 2px;
+}
+
+.win98-control-btn {
+	background-color: #c0c0c0;
+	border: 1px solid #fff;
+	box-shadow: inset 1px 1px #808080;
+	width: 16px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.minimize-btn {
+	line-height: 10px;
+}
+
+.win98-control-btn:hover {
+	background-color: #000080;
+	color: #fff;
+}
+
+.win98-content {
+	padding: 10px;
+	background-color: #fff;
+	border-top: 2px solid #808080;
+	border-left: 2px solid #808080;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
