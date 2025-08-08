@@ -1,5 +1,5 @@
 import "./Window.css"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import PropTypes from "prop-types"
 
 const Window = ({ isOpen, closeWindow, title, children }) => {
@@ -19,18 +19,21 @@ const Window = ({ isOpen, closeWindow, title, children }) => {
 		})
 	}
 
-	const handleMouseMove = (e) => {
-		if (!isDragging) return
+	const handleMouseMove = useCallback(
+		(e) => {
+			if (!isDragging) return
 
-		setPosition({
-			x: e.clientX - dragOffset.x,
-			y: e.clientY - dragOffset.y,
-		})
-	}
+			setPosition({
+				x: e.clientX - dragOffset.x,
+				y: e.clientY - dragOffset.y,
+			})
+		},
+		[isDragging, dragOffset.x, dragOffset.y]
+	)
 
-	const handleMouseUp = () => {
+	const handleMouseUp = useCallback(() => {
 		setIsDragging(false)
-	}
+	}, [])
 
 	useEffect(() => {
 		if (isDragging) {
@@ -44,7 +47,7 @@ const Window = ({ isOpen, closeWindow, title, children }) => {
 			document.removeEventListener("mouseup", handleMouseUp)
 			document.body.style.userSelect = ""
 		}
-	}, [isDragging, dragOffset])
+	}, [handleMouseMove, handleMouseUp, isDragging])
 
 	if (!isOpen) return
 
@@ -86,7 +89,6 @@ export default Window
 Window.propTypes = {
 	isOpen: PropTypes.bool.isRequired,
 	closeWindow: PropTypes.func.isRequired,
-	closeComponent: PropTypes.func.isRequired,
 	title: PropTypes.string,
 	children: PropTypes.node,
 }
