@@ -1,7 +1,8 @@
 import "./App.css"
 import { useState } from "react"
 import computerIcon from "./assets/windows98Icons/computerIcon.png"
-import Window from "./Components/Window"
+import Window from "./Components/Window/Window"
+import Taskbar from "./Components/Taskbar/Taskbar"
 
 function App() {
 	const [windows, setWindows] = useState([])
@@ -42,6 +43,8 @@ function App() {
 					{window.content}
 				</Window>
 			))}
+
+			<Taskbar />
 		</>
 	)
 }

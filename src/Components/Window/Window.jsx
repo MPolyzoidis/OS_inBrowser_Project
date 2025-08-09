@@ -11,6 +11,8 @@ const Window = ({ isOpen, closeWindow, title, children }) => {
 		dragOffset: { x: 0, y: 0 },
 	})
 
+	const windowRef = useRef(null)
+
 	const handleMaximize = useCallback(() => {
 		setWindowState((prev) => ({
 			...prev,
@@ -18,8 +20,6 @@ const Window = ({ isOpen, closeWindow, title, children }) => {
 			isDraggable: !prev.isDraggable,
 		}))
 	}, [])
-
-	const windowRef = useRef(null)
 
 	const handleMouseDown = useCallback(
 		(e) => {
