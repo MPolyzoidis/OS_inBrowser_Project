@@ -3,7 +3,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 30px;
+	height: 40px;
 	background: linear-gradient(
 		to bottom,
 		#c3c3c3 0%,
@@ -17,14 +17,13 @@
 	border-bottom: 1px solid #808080;
 	display: flex;
 	align-items: center;
-	font-family: "MS Sans Serif", sans-serif;
-	font-size: 11px;
+	font-size: 14px;
 	z-index: 1000;
 	box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #808080;
 }
 
 .start-button {
-	height: 22px;
+	height: 100%;
 	margin: 4px 6px 4px 4px;
 	padding: 2px 8px 2px 4px;
 	background: linear-gradient(
@@ -34,8 +33,7 @@
 		#c0c0c0 100%
 	);
 	border: 1px outset #c0c0c0;
-	font-family: "MS Sans Serif", sans-serif;
-	font-size: 11px;
+	font-family: "RetroFont", sans-serif;
 	font-weight: bold;
 	color: #000000;
 	display: flex;
@@ -65,21 +63,16 @@
 	);
 }
 
-.start-icon {
-	font-size: 14px;
-	line-height: 1;
-}
-
 .taskbar-programs {
 	flex: 1;
 	display: flex;
+	height: 100%;
 	gap: 2px;
 	margin: 0 4px;
 	overflow: hidden;
 }
 
 .program-button {
-	height: 22px;
 	max-width: 150px;
 	min-width: 100px;
 	padding: 2px 6px;
@@ -90,8 +83,7 @@
 		#c0c0c0 100%
 	);
 	border: 1px outset #c0c0c0;
-	font-family: "MS Sans Serif", sans-serif;
-	font-size: 11px;
+	font-family: "RetroFont", sans-serif;
 	color: #000000;
 	display: flex;
 	align-items: center;
@@ -124,17 +116,14 @@
 }
 
 .program-icon {
-	font-size: 12px;
 	line-height: 1;
 	flex-shrink: 0;
 }
 
 .system-tray {
 	display: flex;
+	height: 100%;
 	align-items: center;
-	height: 22px;
-	margin: 4px 4px 4px 0;
-	padding: 2px 4px;
 	background: linear-gradient(
 		to bottom,
 		#c3c3c3 0%,
@@ -152,7 +141,6 @@
 }
 
 .tray-icon {
-	font-size: 12px;
 	cursor: pointer;
 	padding: 2px;
 	line-height: 1;

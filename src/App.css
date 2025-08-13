@@ -1,15 +1,3 @@
-@font-face {
-	font-family: "RetroFont";
-	src: url("/fonts/Perfect DOS VGA 437 Win.ttf") format("truetype");
-	font-weight: normal;
-	font-style: normal;
-}
-
-body {
-	background-color: #008080;
-	font-family: "RetroFont", sans-serif;
-}
-
 .whiteText {
 	color: white;
 	font-size: 30px;

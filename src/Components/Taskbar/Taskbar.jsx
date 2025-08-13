@@ -5,7 +5,7 @@ const Taskbar = () => {
 	return (
 		<div className="taskbar">
 			<button className="start-button">
-				<span className="start-icon">🖥️</span>
+				<span>🖥️</span>
 				Start
 			</button>
 
